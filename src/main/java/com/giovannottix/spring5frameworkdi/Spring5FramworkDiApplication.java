@@ -1,9 +1,6 @@
 package com.giovannottix.spring5frameworkdi;
 
-import com.giovannottix.spring5frameworkdi.controller.ConstructorInjectedController;
-import com.giovannottix.spring5frameworkdi.controller.MyController;
-import com.giovannottix.spring5frameworkdi.controller.PropertyInjectedController;
-import com.giovannottix.spring5frameworkdi.controller.SetterInjectedController;
+import com.giovannottix.spring5frameworkdi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +12,10 @@ public class Spring5FramworkDiApplication {
 		ApplicationContext ctx =
 				SpringApplication.run(Spring5FramworkDiApplication.class,
 				args);
+
+		I18nController i18nController = (I18nController) ctx.getBean(
+				"i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
