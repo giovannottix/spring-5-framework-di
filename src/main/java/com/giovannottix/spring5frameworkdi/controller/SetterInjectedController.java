@@ -2,6 +2,7 @@ package com.giovannottix.spring5frameworkdi.controller;
 
 import com.giovannottix.spring5frameworkdi.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -18,6 +19,7 @@ public class SetterInjectedController {
      * Area of much debate.
      */
     @Autowired
+    @Qualifier("greetingServiceSetter")
     public void setGreetingService(IGreetingService greetingService) {
         this.greetingService = greetingService;
     }

@@ -1,11 +1,9 @@
 package com.giovannottix.spring5frameworkdi.controller;
 
-import com.giovannottix.spring5frameworkdi.service.GreetingServiceImpl;
+import com.giovannottix.spring5frameworkdi.service.GreetingServiceConstructor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by Giovanni Esposito.
@@ -19,12 +17,12 @@ class ConstructorInjectedControllerTest {
     @BeforeEach
     void setup() {
         controller =
-                new ConstructorInjectedController(new GreetingServiceImpl());
+                new ConstructorInjectedController(new GreetingServiceConstructor());
     }
 
     @Test
     void getGreeting() {
-        Assert.isTrue(("Hello Wold").equals(controller.getGreeting()),
+        Assert.isTrue(("Hello Wold - Constructor").equals(controller.getGreeting()),
                 "The String are different");
     }
 }

@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
  * @since : 05/02/20, Sat
  */
 @Service
-public class GreetingServiceImpl implements IGreetingService {
+public class GreetingServiceSetter implements IGreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello Wold";
+        return "Hello Wold - Setter";
     }
 }

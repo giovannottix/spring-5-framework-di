@@ -1,11 +1,10 @@
 package com.giovannottix.spring5frameworkdi.controller;
 
-import com.giovannottix.spring5frameworkdi.service.GreetingServiceImpl;
+import com.giovannottix.spring5frameworkdi.service.GreetingServiceConstructor;
+import com.giovannottix.spring5frameworkdi.service.GreetingServiceProperty;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by Giovanni Esposito.
@@ -19,12 +18,12 @@ class PropertyInjectedControllerTest {
     void setup(){
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new GreetingServiceProperty();
     }
 
     @Test
     void getGreeting(){
-        Assert.isTrue(("Hello Wold").equals(controller.getGreeting()),
+        Assert.isTrue(("Hello Wold - Property").equals(controller.getGreeting()),
                 "The String are different");
     }
 }

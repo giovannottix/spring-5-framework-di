@@ -1,6 +1,7 @@
 package com.giovannottix.spring5frameworkdi.controller;
 
 import com.giovannottix.spring5frameworkdi.service.IGreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -19,7 +20,8 @@ public class ConstructorInjectedController {
     /**
      * Most preferred.
      */
-    public ConstructorInjectedController(IGreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier(
+            "greetingServiceConstructor") IGreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
