@@ -17,9 +17,9 @@ public class Spring5FramworkDiApplication {
 				args);
 
 		MyController myController = (MyController) ctx.getBean("myController");
-		String greetings = myController.sayHello();
 
-		System.out.println(greetings);
+		System.out.println("----- Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("----- DI with Spring by property");
 		PropertyInjectedController propertyInjectedController =
