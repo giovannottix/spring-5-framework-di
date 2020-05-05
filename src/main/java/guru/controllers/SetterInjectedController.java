@@ -1,4 +1,4 @@
-package guru.springframework.sfgdi.controllers;
+package guru.controllers;
 
 import guru.springframework.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
