@@ -1,13 +1,13 @@
 package guru.springframework.sfgdi;
 
-import guru.controllers.*;
+import guru.springframework.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"guru.controllers", "guru.springframework"})
+@ComponentScan(basePackages = {"guru.springframework.sfgdi.controllers", "guru.springframework"})
 public class SfgDiApplication {
 
 	public static void main(String[] args) {

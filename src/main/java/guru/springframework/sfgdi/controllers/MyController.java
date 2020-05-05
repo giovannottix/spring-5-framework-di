@@ -1,18 +1,17 @@
-package guru.controllers;
+package guru.springframework.sfgdi.controllers;
 
 import guru.springframework.sfgdi.services.GreetingService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
- * Created by jt on 12/27/19.
+ * Created by jt on 12/26/19.
  */
 @Controller
-public class I18nController {
+public class MyController {
 
     private final GreetingService greetingService;
 
-    public I18nController(@Qualifier("i18nService") GreetingService greetingService) {
+    public MyController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
