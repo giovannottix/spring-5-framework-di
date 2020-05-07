@@ -1,5 +1,20 @@
 giovanni:
   jms:
-    user: jmsName
+    user: "YAML JMS NAME"
     pwd: jmsPWD
     url: jmsLocalhost
+
+#three dash means yaml file separator
+---
+spring:
+  profiles: de
+giovanni:
+  jms:
+    user: "YAML JMS NAME GERMAN"
+
+---
+spring:
+  profiles: es
+giovanni:
+  jms:
+    user: "YAML NAME ESPAÑOL"
