@@ -1,0 +1,32 @@
+# this is a comment
+
+name: Giovanni
+
+names: #comment
+  - Dayana
+  - Paul
+  - Gwen
+
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: Random
+
+truth: yes
+another_truth: True
+more_true: true
+
+false: no #no, false, FALSE
+
+string_val: "This is it's quote"
+
+include_new_lines: |
+  line 1
+  line 2
+  line 3
+
+ignore_new_lines: >
+  line 1
+  line 2
+  line 3
