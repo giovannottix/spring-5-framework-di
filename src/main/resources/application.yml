@@ -1,0 +1,5 @@
+giovanni:
+  jms:
+    user: jmsName
+    pwd: jmsPWD
+    url: jmsLocalhost

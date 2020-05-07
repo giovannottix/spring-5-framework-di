@@ -25,13 +25,13 @@ public class PropertyConfig {
     @Value("${database.url}")
     String url;
 
-    @Value("${jms.user}")
+    @Value("${giovanni.jms.user}")
     String jmsUser;
 
-    @Value("${jms.pwd}")
-    String jmswd;
+    @Value("${giovanni.jms.pwd}")
+    String jmsPwd;
 
-    @Value("${jms.url}")
+    @Value("${giovanni.jms.url}")
     String jmsUrl;
 
     @Bean
@@ -46,9 +46,9 @@ public class PropertyConfig {
     @Bean
     public FakeJMSSource fakeJmsSource() {
         FakeJMSSource fakeJMSSource = new FakeJMSSource();
-        fakeJMSSource.setUser(user);
-        fakeJMSSource.setPwd(pwd);
-        fakeJMSSource.setUrl(url);
+        fakeJMSSource.setUser(jmsUser);
+        fakeJMSSource.setPwd(jmsPwd);
+        fakeJMSSource.setUrl(jmsUrl);
         return fakeJMSSource;
     }
 

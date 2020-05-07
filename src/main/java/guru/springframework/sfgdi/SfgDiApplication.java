@@ -2,6 +2,7 @@ package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.exampleprops.FakeDataSource;
+import guru.springframework.sfgdi.exampleprops.FakeJMSSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -44,6 +45,14 @@ public class SfgDiApplication {
 		System.out.println("User " + fakeDataSource.getUser());
 		System.out.println("Pwd " + fakeDataSource.getPwd());
 		System.out.println("URL " + fakeDataSource.getUrl());
+
+		System.out.println("--------------" );
+		FakeJMSSource fakeJmsSource =
+				(FakeJMSSource) ctx.getBean(FakeJMSSource.class);
+		System.out.println("User " + fakeJmsSource.getUser());
+		System.out.println("Pwd " + fakeJmsSource.getPwd());
+		System.out.println("URL " + fakeJmsSource.getUrl());
+
 
 	}
 
