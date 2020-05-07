@@ -1,10 +1,10 @@
-package guru.springframework.sfgdi.datasource;
+package guru.springframework.sfgdi.exampleprops;
 
 /**
  * @author: Giovanni Esposito.
  * @Date : 05/06/20, Wed
  */
-public class FakeDataSource {
+public class FakeJMSSource {
     private String user;
     private String pwd;
     private String url;
